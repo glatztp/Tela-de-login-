@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* #### Framework #### */
+
+html,body{
+    height: 100%;
+}
+
+.max-width{
+    width: 100%;
+    min-height: auto;
+}
+
+.bg{
+    background: url('../img/bg-1.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.bg2{
+    background: url('image/bg-4.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 1680px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.text-gd{
+    font-size: 72px ;
+}
+
+.text-md{
+    font-size: 42px;
+}
+
+.text-pq{
+    font-size: 20px;
+}
+
+.text-title{
+    font-size: 20px;
+    font-weight: 600;
+        border-radius: 25px;
+}
+
+.color-azul{
+    color: #c5cdd3;
+}
+
+.color-azul-1{
+    color: #000000;
+}
+
+.color-cinza-2{
+    color: #000000;
+}
+
+.call{
+    display: flex;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.left{
+    width: 50%;
+    min-height: 600px;
+    max-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2%;
+}
+
+
+
+.square{
+    width:95%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D9D9D9;
+}
+
+img{
+    width: 70%;
+    object-fit: contain;
+}
+
+button{
+    padding: 10px 20px;
+    background: #000000;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.8s ease;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+button:hover{
+    border: 1px solid #000000;
+    background: #000000;
+    color: #fff;
+    transform: scale(1.10);
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: column;
+    padding: 0 2%;
+    width: 100%;
+    min-height: 800px;
+}
+
+.titulo{
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 40px;
+    text-shadow: 0 0 1px #f8f6f6;
+    color: #000000;
+}
+.line{
+    width: 80%;
+    height: 2px;
+    background: #2e0101;
+    position: relative;
+    top: 40px;
+}
+
+.text-titulo{
+    position: relative;
+    top: -10px;
+    z-index: 99;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    font-size: 18px;
+    background: #4e4e4e;
+    color: #fff;
+        border-radius: 25px;
+    
+}
+
+.down{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 300px;
+}
+
+.box{
+    width: 20%;
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2%;
+    transition: 0.5s ease;
+}
+
+.info{
+    display: flex;
+}
+
+.menu{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    background:#646464;
+}
+
+.logo{
+    background: url('#') no-repeat;
+    background-size: contain;
+    width: 130px;
+    height: 80px;
+    position: relative;
+    top: 20px;
+    z-index: 9;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 2px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #424242;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #b3b3b3;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color:#000000;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+
+/* #### desktop-menu #### */
+
+.desktop-menu ul{
+    display: flex;
+}
+
+.desktop-menu ul li{
+    padding: 0 25px;
+    list-style-type: none;
+}
+
+.desktop-menu ul li a{
+    color:#f7f8fa;
+    text-shadow: 0 0 5px #848790;
+    font-size: 23px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.8s ease;
+}
+
+.desktop-menu ul li a:hover{
+    color:#161616;
+    text-shadow: 0 0 5px #8B634A;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+/* #### mobile-menu #### */
+
+.mobile-menu{
+    width: 95%;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    background: transparent;
+    display: none;
+}
+
+.mobile-menu i{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    font-size: 23px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mobile-menu ul{
+    display: block;
+    text-align: center;
+}
+
+.mobile-menu ul li{
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.mobile-menu ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    color:#f8f7f7;
+    text-shadow: 0 0 5px #703208;
+}
+
+.mobile-menu ul li a:hover{
+    color:#474747;
+    text-shadow: 0 0 5px #8B634A;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* #### Fim do Framework #### */
+
+/* #### Header #### */
+
+header .container{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header .left{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header .left h1{
+    text-align: start;
+    font-weight: 400;
+    text-shadow: 0 0 5px #848790;
+    padding: 0 40px;
+}
+
+header .left p{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    text-align: start;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #848790;
+    margin-top: 60px;
+    padding: 0 40px;
+}
+
+header button{
+    margin-top:60px;
+    margin-left: 40px;
+}
+
+
+
+/* #### Fim do Header #### */
+
+/* #### About #### */
+
+#About .container{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#About .titulo h2{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#About .box{
+    box-shadow: 0 5px 20px #2B2B2B;
+    background:transparent;
+    margin-bottom: 120px;
+}
+
+#About .box .text{
+    margin-right: 80px;
+}
+
+#About .box .text i{
+    position: relative;
+    bottom:35px;
+    left: 180px;
+    font-size: 20px;
+}
+
+#About .box img{
+    width: 100%;
+}
+
+#About .box h2{
+    margin-top: 40px;
+    text-align:start;
+    font-weight: 300;
+}
+
+#About .box p, span{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align:start;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* #### Fim do About #### */
+
+/* #### Service #### */
+
+#Service .titulo h2{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#Service .box{
+    width: 80%;
+    background: #fff;
+}
+
+#Service .box img{
+    width:300px;
+    height: 500px;
+    object-fit: contain;
+}
+
+#Service .box h2{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#Service .box p{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#Service .container input[type=radio]{
+    display: none;
+}
+#Service .container .card{
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: -120px;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0 0 10px 0 #000000;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+#Service .container .card img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+#Service .container .card button{
+    position: absolute;
+    bottom: 10px;
+    z-index: 9;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#Service .container .cards{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2{
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1{
+    transform: translateX(100%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+}
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3{
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* #### Fim do Service #### */
+
+/* #### Contact #### */
+
+#Contact .container{
+    flex-direction: column;
+    height: 90vh;
+}
+
+#Contact .container .titulo{
+    min-height: 0;
+    margin-bottom: 60px;
+}
+
+#Contact .container .left{
+    box-shadow: 0 0 15px #848790;
+    margin: 2%;
+        border-radius: 25px;
+}
+
+#Contact .container .left .box{
+    width: 100%;
+    height: 550px;
+    background: #333333;
+        border-radius: 25px;
+}
+
+#Contact .container .left .box h1{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-shadow: 0 0 10px #0c0c0c;
+    color: #f8f9fa;
+}
+
+#Contact .container .left .box form{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+}
+
+#Contact .container .left .box form input{
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+}
+
+#Contact .container .left .box .social{
+    color: #0e0d0d;
+    font-size: 32px;
+}
+
+#Contact .container .left .box .social i{
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#Contact .container .left .box .social i:hover{
+    color: #696969;
+}
+
+#Contact .container .left .box form input[type=submit]{
+    background: #474646;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#Contact .container .left .box form input[type=submit]:hover{
+    background: #666666;
+        border-radius: 25px;
+}
+
+
+#Contact .titulo h2{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#Contact .content{
+    flex-direction:row;
+}
+
+/* #### Fim do Contact #### */
+
+/* #### footer #### */
+
+footer .container{
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #474747;
+}
+
+footer .container img{
+    width: 120px;
+    object-fit: contain;
+}
+
+footer .container p{
+    font-weight: 600;
+    color: #fafcfd;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* #### Fim do footer #### */
+
+/* #### Responsivo #### */
+
+@media screen and (max-width: 922px){
+
+    .text-gd{
+        font-size: 54px ;
+    }
+    
+    .text-md{
+        font-size: 28px;
+    }
+    
+    .text-pq{
+        font-size: 13px;
+    }
+
+    .text-title{
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 740px){
+
+    .desktop-menu ul{
+        display: none;
+    }
+
+    .text-gd{
+        font-size:42px ;
+    }
+
+    .text-title{
+        font-size: 16px;
+    }
+
+    .mobile-menu ul{
+        display: block;
+    }
+    
+    header .right .imagem{
+        width: 100%;
+    }
+
+    .titulo{
+        min-height: 150px;
+    }
+
+    .down{
+        justify-content: space-between;
+        flex-direction: column;
+        min-height: 600px;
+    }
+
+    .box{
+        width:60%;
+    }
+
+    #About .box img{
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    #Menu .box h2{
+        margin-top: 10px;
+     }
+     
+    #Menu .box p{
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom:0;
+        color: #fff;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+ 
+    footer .container{
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 150px;
+    }
+    footer .container p{
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 648px){
+
+    .left{
+        width: 100%;
+        min-height:auto;
+        padding: 0 2%;
+        border-radius: 25px;
+    }
+
+   
+
+    .logo{
+        width: 110px;
+        top: 10px;
+        left: 5px;
+    }
+
+    img{
+        width: 90%;
+    }
+
+    .call{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    header .left{
+        margin-top: -100px;
+    }
+
+    header .right .imagem{
+        width: 60%;
+    }
+
+  
+
+    #Service .container .card{
+        width: 80%;
+        height: auto;
+        top: -20px;
+    }
+
+    #item-1:checked ~ .cards #song-3,
+    #item-2:checked ~ .cards #song-1,
+    #item-3:checked ~ .cards #song-2{
+        transform: translateY(-0%) scale(0.8);
+        opacity: 0.4;
+        z-index: 0;
+    }
+
+    #item-1:checked ~ .cards #song-2,
+    #item-2:checked ~ .cards #song-3,
+    #item-3:checked ~ .cards #song-1{
+        transform: translateY(25%) scale(0.8);
+        opacity: 0.4;
+        z-index: 0;
+    }
+
+    #Contact .content {
+        flex-direction: column;
+    }
+
+    #Contact .container .left{
+        height: 38vh;
+    }
+
+  
+
+    #Contact .container .left .box{
+        width: 80%;
+        height: 35vh;
+    }
+
+
+    #Contact .container .left .box h1{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    #Contact .container .left .box form{
+        width: 80%;
+    }
+
+    #Contact .container .left .box input[type=text],
+    #Contact .container .left .box input[type=email],
+    #Contact .container .left .box input[type=submit]{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    #Contact .container .left .box .social{
+        margin-bottom: 20px;
+    }
+
+    #Contact .container .left .box i{
+        font-size: 22px;
+    }
+
+ 
+}
+
+
+
+
+	</style>
+
+	<title>Cadastro</title>
+
+
+</head>
+<body>
+	<section class="max-width bg2" id="Contact">
+        <div class="container">
+            <div class="titulo">
+                <h2 class="text-md color-cinza-1">Login</h2>
+                <div class="line">
+            
+                </div>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <div class="box">
+                        <h1>Dados</h1>
+                        <form action="">
+                            <input type="text" placeholder=" Nome Completo">
+                            <input type="email" placeholder=" Seu E-mail">
+                            <input type="submit" value=" Inscreva-se">
+                        </form>
+                        
+                        <div class="social">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
